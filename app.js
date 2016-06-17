@@ -2,10 +2,11 @@
 var App = {
     jP: '#jquery_jplayer_1',
     listTrack: [],
+    player: {},
     loadPlayer: function(){
         $.getJSON( "./tracks.json", function( data ) {
             App.listTrack = data;
-            new jPlayerPlaylist({
+            App.player = new jPlayerPlaylist({
         		jPlayer: App.jP,
         		cssSelectorAncestor: "#jp_container_1"
         	}, App.listTrack, {
@@ -21,12 +22,18 @@ var App = {
             $(App.jP).bind($.jPlayer.event.progress, function (event) {
                if (event.jPlayer.status.seekPercent === 100) {
                  $('.jp-seek-bar, .jp-volume-bar').slider();
+                  App.player.options.timeupdate = (function(){
+                      $('.jp-seek-bar').slider("value", event.jPlayer.status.currentPercentAbsolute);
+                  }());
+                 App.player.options.volumechange = (function() {
+                         $('.jp-volume-bar').slider("value", (event.jPlayer.options.volume * 100));
+                  }());
                  App.changeSong();
                  $('.jp-playlist').mCustomScrollbar({
                      theme:"my-theme"
                  });
                 } else {
-                 // Still loading
+                  console.log('Still loading');
                 }
             });
 
