@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 1300px;
+    position: relative;
+    background: #15171a;
+}
+
+#jp_container_1 {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    bottom: 200px;
+    left: 0px;
+}
+
+.jp-playlist {
+    display: none;
+    background: #252525;
+    color: #fff;
+    border: 0;
+    top: -162px;
+    height: 160px;
+    overflow: hidden;
+}
+.jp-playlist ul {
+    padding: 0px;
+    counter-reset: list;
+}
+.jp-playlist li {
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+.jp-playlist li:before {
+    counter-increment: list;
+    content: counter(list)" ";
+    margin-right: 10px;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current {
+    padding-left: 20px;
+    list-style-type: none;
+}
+div.jp-type-playlist div.jp-playlist li.jp-playlist-current:before {
+    content: '';
+    background: url('./jPlayer/src/skin/my/phone.png') no-repeat 0 0;
+    width: 19px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.jp-playlist li + li{
+    border-top: 1px solid #2b2b2b;
+}
+
+div.jp-type-playlist div.jp-playlist a {
+    color: #fff;
+}
+div.jp-type-playlist div.jp-playlist a.jp-playlist-current, div.jp-type-playlist div.jp-playlist a:hover {
+    color: #fff;
+}
+
+.jp-audio {
+    background-color: rgba(77, 77, 77, 0.85);
+}
+
+.jp-audio, .jp-audio-stream, .jp-video {
+    border: 0;
+}
+.jp-audio .jp-interface, .jp-audio-stream .jp-interface {
+    height: 75px;
+}
+.jp-audio .jp-interface {
+    width: 1190px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.jp-play {
+    width: 46px;
+    height: 46px;
+    background: url('./jPlayer/src/skin/my/play.png') no-repeat 0 0 !important;
+    margin: -5px 10px 0px;
+}
+.jp-play.stopped {
+    background-position: 0 100% !important;
+}
+.jp-next, .jp-previous {
+    width: 25px;
+    height: 20px;
+    background: url('./jPlayer/src/skin/my/back-forward.png') no-repeat 0 100% !important;
+}
+.jp-next {
+    background-position: 100% 100% !important;
+}
+.jp-next:hover {
+    background-position: 100% 0 !important;
+}
+.jp-previous:hover {
+    background-position: 0 0 !important;
+}
+.jp-stop {
+    display: none !important;
+}
+
+.jp-progress{
+    background-color:transparent;
+}
+
+.jp-audio .jp-type-playlist .jp-progress {
+    left: 410px;
+    top: 43px;
+    width: 280px;
+}
+
+.jp-audio .jp-type-playlist .jp-time-holder {
+    left: 700px;
+    width: 130px;
+    color: #fff;
+    top: 50px;
+}
+
+.jp-volume-controls {
+    left: 175px;
+}
+.jp-volume-controls button.jp-mute,
+.jp-volume-controls button.jp-volume-max,
+.jp-toggles,
+.jp-duration {
+    display: none !important;
+}
+.jp-volume-bar {
+    left: 0px;
+    width: 100px;
+    top: 25px;
+    height: 30px;
+    margin-top: 10px;
+    overflow: visible;
+}
+
+.jp-audio .jp-interface .jp-icon {
+    position: absolute;
+    left: 343px;
+    top: 10px;
+}
+
+.ui-widget-content {
+    background: #252525;
+    height: 4px;
+    border: 0px;
+    top: 15px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    border: 0px;
+}
+.jp-volume-bar .ui-state-default, .jp-volume-bar .ui-widget-content .ui-state-default, .jp-volume-bar  .ui-widget-header .ui-state-default {
+    width:3px;
+    height: 20px;
+    border-radius: 0px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -9px;
+    margin-left: 0px;
+}
+.jp-audio .jp-progress {
+    height: 30px;
+}
+.title-track {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    margin-top: -55px;
+    left: 500px;
+}
+.title-track.list {
+    position: relative;
+    font-size: 14px;
+    margin-top: 0px;
+    left: auto;
+}
+.jp-current-time {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+}
+.jp-current-time:before {
+    content: '-';
+}
+.tracks-btn,
+.open>.dropdown-toggle.btn-default,
+.open>.dropdown-toggle.btn-default  {
+    background: transparent !important;
+    border: 1px solid #7d7d7d;
+    color: #fff !important;
+}
+.tracks-btn:hover,
+.open>.dropdown-toggle.btn-default:focus,
+.open>.dropdown-toggle.btn-default:hover {
+    background: transparent;
+    color: #fff;
+}
+.dropdown {
+    position: absolute;
+    right: 100px;
+    top: 20px;
+    width: 305px;
+}
+.mCS-my-theme.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+    background-color: #757575;
+    width: 6px;
+}
+.mCS-my-theme.mCSB_scrollTools .mCSB_draggerRail{
+    background-color: #2f2f2f;
+    width: 6px;
+}
+#social {
+    float: right;
+}
+#social img{
+    margin-left: 5px;
+    cursor: pointer;
+}
