@@ -15,6 +15,7 @@ body {
     z-index: 1000;
     bottom: 200px;
     left: 0px;
+    display: none;
 }
 
 .jp-playlist {
@@ -147,6 +148,12 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-current, div.jp-type-playlist
     position: absolute;
     left: 343px;
     top: 10px;
+}
+
+.volum-icon {
+    position: absolute;
+    top: -20px;
+    left: 30px;
 }
 
 .ui-widget-content {

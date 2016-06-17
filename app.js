@@ -32,6 +32,7 @@ var App = {
                  $('.jp-playlist').mCustomScrollbar({
                      theme:"my-theme"
                  });
+                 $('#jp_container_1').show();
                 } else {
                   console.log('Still loading');
                 }
