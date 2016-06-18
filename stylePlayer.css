@@ -237,3 +237,59 @@ div.jp-type-playlist div.jp-playlist a.jp-playlist-current, div.jp-type-playlist
     margin-left: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 1189px) {
+    .jp-audio .jp-interface {
+        width: auto;
+    }
+    .title-track.list {
+        display: none;
+    }
+    .jp-icon {
+        display: none;
+    }
+    .jp-volume-controls {
+        left: 20%;
+    }
+    .jp-volume-controls {
+        width: 20%;
+    }
+    .jp-volume-bar {
+        width: 50%;
+    }
+    .jp-audio .jp-type-playlist .jp-progress {
+        width: 25%;
+        left: 40%;
+    }
+    .jp-audio .jp-type-playlist .jp-time-holder{
+        left: 70%;
+    }
+    .dropdown {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: auto;
+    }
+    .title-track {
+        left: 40%;
+    }
+    .jp-playlist {
+        min-width: 300px;
+        right: 0px;
+        left: auto;
+    }
+}
+@media (max-width: 567px) {
+    .tracks-btn {
+        font-size: 0px;
+    }
+    .title-track {
+            font-size: 14px;
+    }
+    .volum-icon {
+        display: none;
+    }
+    .jp-volume-controls {
+        left: 25%;
+    }
+}

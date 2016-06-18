@@ -37,7 +37,7 @@ var App = {
                   console.log('Still loading');
                 }
             });
-
+            App.clickPlayToggle();
         });
     },
     changeSong: function(){
